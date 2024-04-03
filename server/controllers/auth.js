@@ -4,6 +4,12 @@ import jwt from "jsonwebtoken"
 
 export const register = async (req, res, next) => {
   const {name, email, password} = req.body;
+  
+  // Check for minimum password length
+  if (password.length < 10) {
+    return res.status(400).json({message:"Password must be at least 10 characters long"});
+  }
+
   const userExists = await User.findOne({ email });
   if (userExists) return res.status(400).json({message:"Email already exists"});
 
@@ -35,6 +41,7 @@ export const register = async (req, res, next) => {
     next(err);
   }
 }
+
 
 export const login = async(req, res, next)=>{
   try{
@@ -74,3 +81,4 @@ export const logout = async (req, res, next) => {
     next(err);
   }
 };
+

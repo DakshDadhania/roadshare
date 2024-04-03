@@ -6,7 +6,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import useFetch from '@/hooks/useFetch';
 import { MoveRight, SlidersHorizontal } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-
+import MapTilerDisplay from '@/components/MapTilerDisplay';
 const SearchPage = () => {
   const { search } = useLocation();
   const { from, to, date, seat } = Object.fromEntries(new URLSearchParams(search));
@@ -34,6 +34,7 @@ const SearchPage = () => {
         </div>
         <div className="col-span-3 py-6 md:col-span-4 lg:border-l">
           <div className="container">
+         
             {loading && (
               <>
                 <Skeleton className="h-[200px] w-full my-3 p-4 rounded-xl" />
@@ -57,7 +58,11 @@ const SearchPage = () => {
                 )}
               </>
             )}
+             <div id="map">
+                <MapTilerDisplay from={from} to={to}  />
+               </div>
           </div>
+          
         </div>
       </div>
     </main>

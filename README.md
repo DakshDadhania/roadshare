@@ -48,3 +48,15 @@ This project was created using the following technologies.
 ####  Database 
 
  - [MongoDB ](https://www.mongodb.com/) - Free cloud service to store MongoDB collections.
+# Contributors
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/DakshDadhania"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/63968989?v=4" width="100px;" alt="Daksh Dadhania"/><br /><sub><b>Daksh Dadhania</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/Zaidk2021"><img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/93735014?v=4" width="100px;" alt="Zaid Khan"/><br /><sub><b>Zaid Khan</b></sub></a><br /></td>
+
+
+  </tr>
+</table>
+
+`Thank you!🧑‍💻`
